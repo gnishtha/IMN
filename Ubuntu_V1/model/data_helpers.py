@@ -22,7 +22,7 @@ def load_vocab(fname):
     vocab={}
     with open(fname, 'rt') as f:
         for line in f:
-            fields = line.decode('utf-8').strip().split('\t')
+            fields = line.strip().split('\t')
             vocab[fields[0]] = int(fields[1])
     return vocab
 
