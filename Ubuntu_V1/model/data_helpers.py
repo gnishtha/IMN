@@ -47,7 +47,7 @@ def load_responses(fname, vocab, maxlen):
     responses={}
     with open(fname, 'rt') as f:
         for line in f:
-            line = line.decode('utf-8').strip()
+            line = line.strip()
             fields = line.split('\t')
             if len(fields) != 2:
                 print("WRONG LINE: {}".format(line))
@@ -64,7 +64,7 @@ def load_dataset(fname, vocab, max_utter_len, max_utter_num, responses):
     dataset=[]
     with open(fname, 'rt') as f:
         for line in f:
-            line = line.decode('utf-8').strip()
+            line = line.strip()
             fields = line.split('\t')
             us_id = fields[0]
 
